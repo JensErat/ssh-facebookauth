@@ -7,7 +7,19 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
+  <script type="text/javascript" src="jquery.js"></script> 
+  <script type="text/javascript" src="jquery.socialshareprivacy.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      if($('#socialshareprivacy').length > 0){
+        $('#socialshareprivacy').socialSharePrivacy({
+          "css_path"  : "socialshareprivacy/socialshareprivacy.css",
+          "lang_path" : "socialshareprivacy/lang/",
+          "language"  : "en"
+        });
+      }
+    });
+  </script>
     <title>Facebook Authentication for SSH by JensErat</title>
   </head>
 
@@ -23,6 +35,7 @@
           <a href="https://github.com/JensErat/ssh-facebookauth/tarball/master" class="btn">Download as .tar.gz</a>
           <a href="https://github.com/JensErat/ssh-facebookauth" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
         </section>
+	  <div id="socialshareprivacy"></div>
       </div>
     </header>
 
@@ -39,6 +52,7 @@
 <p>Thank you for authenticating. Please copy the full page URL from your browser's address bar and paste it to your terminal.</p>
       </section>
     </div>
+
 
 <!-- Piwik -->
 <script type="text/javascript">
